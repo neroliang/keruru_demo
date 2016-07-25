@@ -1,16 +1,19 @@
   <div class="container">
     <div class="row">
       <div class="one-half column" style="margin-top: 15%">
-        <h2>Editors</h2>
+        <h2>Potential editors for Kereru</h2>
         <p> Many thanks. You could help with your comments or suggestions on choosing one of them </p>
       </div>
-	    <div class="two column"><a class="button button-primary" href="/editor/draft"><strong>Draft</strong> Editor</a>
+	    <div class="two column">
+	     <%= link_to "Draft editor", "/editor/draft", target: "_blank", class: "button button-primary" %>	    
 	    <a href="https://facebook.github.io/draft-js/">Read more</a>
 	    </div>
-	    <div class="two column"><a class="button button-primary" href="/editor/medium"><em>Medium</em> Editor</a>
+	    <div class="two column">
+	     <%= link_to "Medium editor", "/editor/medium", target: "_blank", class: "button button-primary" %>
 	     <a href="https://yabwe.github.io/medium-editor/">Read more</a>
 	    </div>
-	    <div class="two column"><a class="button button-primary" href="/editor/raptor"><em>Raptor </em> Editor</a>
+	    <div class="two column">
+	    <%= link_to "Raptor editor", "/editor/raptor", target: "_blank", class: "button button-primary" %>
 	    <a href="https://www.raptoreditor.com/demo">Read more</a>
 	    </div>
      </div>
