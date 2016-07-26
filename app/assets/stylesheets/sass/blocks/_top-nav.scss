@@ -1,0 +1,21 @@
+.top-nav {
+  background: url('/img/background-tile.png') repeat $dark-grey;
+  background-color: $black;
+  border-bottom: .0625rem solid $black;
+  box-shadow: 0 .0625rem .125rem $black;
+  padding-top: 1rem;
+
+
+  @include element('navigation') {
+    a {
+      color: $grey;
+      font-size: $small-font-size;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

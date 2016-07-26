@@ -1,0 +1,13 @@
+.record {
+
+  @include element('info') {
+    background: $off-white;
+    box-shadow: 0 .0625rem .0625rem $grey;
+    margin: 2.5rem 0;
+    padding: 1rem 2rem;
+  }
+
+  @include element('social') {
+    padding-bottom: 2rem;
+  }
+}

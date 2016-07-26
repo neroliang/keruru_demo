@@ -1,0 +1,39 @@
+.main-nav {
+  background: url('../img/background-tile.png') repeat $dark-grey;
+  padding: 2.5rem 0;
+
+  @include element('navigation') {
+    li {
+      border-left: .0625rem solid $dark-grey;
+      box-shadow: .0625rem 0 0 $black-40;
+      height: 3.063rem;
+      line-height: 3.063rem;
+      margin: 0 .0625rem 0 0;
+      text-shadow: 0 .0625rem 0 $black;
+
+      &:first-child {
+        border: 0;
+      }
+
+      &.active {
+        background: radial-gradient(ellipse at center, $white-02 1%, $white-02 5%, $white-rgba 55%, $white-rgba 100%);
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    a {
+      color: $grey;
+      padding: 0 1.25rem;
+      text-decoration: none;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

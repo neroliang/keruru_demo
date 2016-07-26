@@ -1,0 +1,63 @@
+.left-hand-nav {
+  background-color: $white;
+
+  @include element('section') {
+    background-color: $off-white;
+    padding: 1rem;
+
+    @include modifier('white-background') {
+      background-color: $white;
+    }
+
+    @include element('subtitle') {
+      font-size: .7rem;
+      line-height: 1.5rem;
+    }
+
+    @include element('list') {
+      font-size: .85rem;
+      list-style: none;
+      margin-left: 0;
+
+      @include element('item') {
+        list-style: none;
+
+        @include modifier('dashed') {
+          &:before {
+            color: $dark-grey;
+            content: '-';
+            margin-right: .6rem;
+          }
+        }
+
+        @include modifier('active') {
+          background-color: $black;
+          color: $white;
+
+          a {
+            color: $white;
+            margin-left: 1rem;
+          }
+        }
+
+        @include element('lock') {
+          margin-right: .5rem;
+        }
+
+        @include element('close') {
+          color: $grey;
+          margin-left: .3rem;
+        }
+      }
+    }
+
+    @include element('help-icon') {
+      margin-left: .3rem;
+    }
+  }
+
+  @include element('empty-block') {
+    background-color: $white;
+    height: 3rem;
+  }
+}

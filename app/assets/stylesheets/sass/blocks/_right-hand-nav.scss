@@ -1,0 +1,91 @@
+.right-hand-nav {
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+
+  @include element('menu-item') {
+    background-color: $off-white;
+    border-bottom: .07143rem solid $grey;
+    list-style: none;
+    position: relative;
+
+    a {
+      border-left: .07143rem solid $very-light-grey;
+      border-right: .07143rem solid $very-light-grey;
+      display: block;
+      padding: .7143rem 1.429rem;
+      text-decoration: none;
+
+      &:hover,
+      &:visited {
+        color: $black;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      background-color: $white;
+    }
+
+    @include modifier('active') {
+      background-color: $white;
+      font-weight: bold;
+    }
+  }
+
+  @include element('sub-nav') {
+    background-color: $white;
+    margin: 0;
+
+    @include element('menu-item') {
+      list-style: none;
+      border-left: .07143rem solid $very-light-grey;
+      border-right: .07143rem solid $very-light-grey;
+
+      a {
+        border: 0;
+        margin: 0 1rem;
+      }
+
+      @include modifier('active') {
+
+        a {
+          font-weight: bold;
+
+          &:before {
+            content: '\f054';
+            font-family: 'FontAwesome';
+            font-size: .6rem;
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include element('section') {
+    background-color: $white;
+    padding: 1rem 1rem 2rem 1rem;
+
+    ul li {
+      &:before {
+        content: '-';
+        margin-right: 0.6rem;
+        color: $dark-grey;
+      }
+    }
+
+    @include modifier('grey') {
+      background-color: $off-white;
+      text-align: center;
+      border-top: 0.0625rem solid $grey;
+      border-bottom: 0.0625rem solid $grey;
+      color: $dark-grey;
+      display: block;
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+}

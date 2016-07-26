@@ -1,0 +1,35 @@
+// General purpose utility classes
+// Please prefix with u-
+
+.u-grey-border {
+  border-left: .625rem solid $border-grey;
+  border-right: .625rem solid $border-grey;
+}
+
+.u-grey-border-left {
+  border-left: .625rem solid $border-grey;
+}
+
+.u-grey-border-right {
+  border-right: .625rem solid $border-grey;
+}
+
+.u-banner {
+  padding: .625rem  0;
+}
+
+.u-container {
+  padding: 0 1.25rem;
+
+  @include modifier('white-background') {
+    background-color: $white;
+  }
+
+  @include modifier('grey-background') {
+    background-color: $off-white;
+  }
+}
+
+.u-white {
+  background-color: $white;
+}

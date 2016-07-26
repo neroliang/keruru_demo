@@ -1,0 +1,79 @@
+.results {
+  background-color: $white;
+  border-left: .0625rem solid $grey;
+  border-right: .0625rem solid $grey;
+  padding: 0;
+
+  @include element('no-result') {
+    border-top: .0625rem solid $grey;
+    padding: 2rem;
+  }
+
+  @include element('summary') {
+    background-color: $off-white;
+    border-top: .0625rem solid $grey;
+    padding: .8rem 1rem;
+
+    i {
+      color: $grey;
+      font-size: 1.3rem;
+    }
+  }
+
+  @include element('search') {
+    background-color: $white;
+    padding: 1.2rem;
+
+    @include element('information') {
+      font-style: italic;
+      margin: 0;
+    }
+
+    @include element('advanced') {
+      float: right;
+      font-size: .7rem;
+    }
+
+    @include element('info') {
+      padding: 1rem 0;
+    }
+
+    @include element('map_info') {
+      h6 {
+        font-size: .8rem;
+      }
+
+      i {
+        color: $grey;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include element('item') {
+    background: -moz-linear-gradient(top left -45deg, $black-02 0%, transparent 30%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0, $black-02), color-stop(.3, transparent));
+    border-top: .0625rem solid $grey;
+    font-size: .9rem;
+    padding: 2rem 1rem;
+
+    @include element('date') {
+      margin-bottom: .8rem;
+    }
+  }
+
+  @include element('images') {
+    padding: 0 1rem;
+
+    img {
+      border: .0625rem solid $grey;
+      box-shadow: 0 0 5px $black-02;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+  }
+
+  @include element('no_results') {
+    padding: 2rem;
+  }
+}

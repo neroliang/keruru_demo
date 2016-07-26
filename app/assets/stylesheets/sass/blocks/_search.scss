@@ -1,0 +1,19 @@
+.search {
+  background: url('../img/background-tile.png') repeat $dark-grey;
+  padding: 1.25rem 0;
+
+  @include element('btn') {
+    background: $dark-grey;
+    background-image: -moz-linear-gradient(center bottom, $white-rgba 0%, $white-02 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $white-rgba), color-stop(1, $white-02));
+    margin-bottom: 0;
+
+    &:hover {
+      background-color: $medium-grey;
+    }
+  }
+
+  @include element('box') {
+    margin: 0 !important;
+  }
+}

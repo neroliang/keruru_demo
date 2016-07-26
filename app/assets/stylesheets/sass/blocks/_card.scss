@@ -1,0 +1,185 @@
+.card {
+  background-color: $dark-grey;
+  box-shadow: .0625rem .0625rem .125rem $black-75;
+  margin-top: 1rem;
+  padding: 0;
+  position: relative;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  // This is used for the 'header' & 'footer' of the card
+  @include element('marginal') {
+    position: relative;
+
+    @include element('icon') {
+      color: $white;
+      line-height: 1.85rem;
+    }
+
+    @include modifier('red') {
+      background-color: $red;
+    }
+
+    @include modifier('turquoise') {
+      background-color: $turquoise;
+    }
+
+    @include modifier('purple') {
+      background-color: $purple;
+    }
+
+    @include modifier('blue') {
+      background-color: $blue;
+    }
+
+    @include modifier('green') {
+      background-color: $green;
+    }
+
+    h5 {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      padding: 1.25rem;
+
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+	}
+
+  @include element('body') {
+    padding: 1.25rem 1.25rem .0625rem;
+
+    a {
+      text-decoration: underline;
+		}
+
+    p {
+      color: $white;
+		}
+
+    @include element('date') {
+      color: $white;
+		}
+
+    @include modifier('red') {
+      a {
+        color: $light-red;
+        &:hover {
+          color: $light-red;
+				}
+			}
+		}
+
+    @include modifier('turquoise') {
+      a {
+        color: $light-turquoise;
+        &:hover {
+          color: $light-turquoise;
+				}
+			}
+		}
+
+    @include modifier('purple') {
+      a {
+        color: $light-purple;
+	      &:hover {
+					color: $light-purple;
+				}
+			}
+		}
+
+    @include modifier('blue') {
+      a {
+        color: $light-blue;
+        &:hover {
+          color: $light-blue;
+				}
+			}
+		}
+
+    @include modifier('green') {
+      a {
+        color: $light-green;
+        &:hover {
+          color: $light-green;
+				}
+			}
+		}
+	}
+
+  @include element('image') {
+    width: 100%;
+  }
+
+  @include element('caption') {
+
+    background-color: $black-75;
+    bottom: 0;
+    color: $white;
+    padding: 1.25em;
+    position: absolute;
+    width: 100%;
+
+    p,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+		}
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    a {
+      &:hover {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+
+    @include element('reference') {
+      border-right: .0625rem solid $white-02;
+      line-height: 3.125rem;
+
+      @media only screen and (max-width: 40em) {
+        border-right: 0;
+      }
+
+			// This is only for the large card at the top of the home page
+      @include modifier('full-width') {
+        h5 {
+          line-height: 3.125rem;
+        }
+
+        @media only screen and (max-width: 40em) {
+          h5 {
+            line-height: 2rem;
+          }
+        }
+      }
+
+      @include element('icon') {
+        line-height: 3.125rem;
+        text-align: center;
+
+        a {
+          padding: 0 1em;
+        }
+
+        @media only screen and (max-width: 40em) {
+          display: none;
+        }
+      }
+		}
+	}
+}

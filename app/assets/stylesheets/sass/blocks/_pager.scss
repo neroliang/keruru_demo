@@ -1,0 +1,21 @@
+.pager {
+  border-bottom: .0625rem solid $grey;
+  font-size: .8rem;
+  padding: 1rem;
+
+  @include element('list') {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+
+    @include element('item') {
+      font-size: .8rem;
+
+      @include modifier('unavailable') {
+        a {
+          color: $grey;
+        }
+      }
+    }
+  }
+}

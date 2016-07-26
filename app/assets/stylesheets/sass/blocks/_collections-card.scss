@@ -1,0 +1,47 @@
+// As distinct from the cards on the home page
+// This is basically a stripped back version
+
+.collections-card {
+  box-shadow: .0625rem .0625rem .125rem $black-75;
+  min-height: 10.9em;
+
+  @include element('image') {
+    height: auto;
+    width: 100%;
+  }
+
+  @include element('title') {
+    border-bottom: .0625rem solid $light-grey;
+    font-family: $collection-heading-font;
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  @include element('description') {
+    color: $light-grey;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @include element('caption') {
+    background-color: $white;
+    padding: .9em;
+
+    h5 {
+      margin-bottom: .75rem;
+      margin-top: 0;
+    }
+
+    h6 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+}

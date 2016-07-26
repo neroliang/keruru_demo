@@ -1,0 +1,11 @@
+// As distinct from the foundation paginator
+
+.paginator {
+  border-top: .0625rem solid $grey;
+
+  @include element('list') {
+    float: right;
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

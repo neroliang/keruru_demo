@@ -1,0 +1,16 @@
+.right-hand-section {
+  font-size: .7rem;
+  padding: 1.4rem;
+
+  h5 {
+    margin-top: 0;
+  }
+
+  @include modifier('grey') {
+    background-color: $very-light-grey;
+  }
+
+  .fa {
+    padding-left: .4rem;
+  }
+}

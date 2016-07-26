@@ -1,0 +1,28 @@
+.panel {
+  background-color: $white;
+
+  h5,
+  h6 {
+    margin-bottom: .625rem;
+    margin-top: .1875rem;
+  }
+
+  @include element('body') {
+    margin-top: .625rem;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @include element('image') {
+    background: $white;
+    border: .0625rem solid $light-grey;
+    padding: .125rem;
+  }
+
+  @include element('button') {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}

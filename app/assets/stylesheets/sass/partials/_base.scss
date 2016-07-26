@@ -1,0 +1,53 @@
+// Base
+
+$body-font: 'Open Sans', sans-serif;
+// For some reason this is only used in the infographic headings.
+$collection-heading-font: 'Georgia', 'Times-New-Roman', sans-serif;
+$small-font-size: 85%;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+.button {
+  font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+// This is almost being used as an H1
+
+h3 {
+  margin: 2.5rem 0;
+}
+
+h5,
+h6 {
+  margin: 1.5rem 0;
+}
+
+body {
+  background: $white url('../img/background-noise.png') repeat;
+  font-family: $body-font;
+
+  a {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $black;
+      text-decoration: underline;
+		}
+	}
+}

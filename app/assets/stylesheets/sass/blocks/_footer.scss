@@ -1,0 +1,78 @@
+.footer {
+  background: url('../img/background-tile.png') repeat $dark-grey;
+  padding: 2.5rem 0;
+
+  h6 {
+    color: $white;
+    font-size: .9rem;
+  }
+
+  a {
+    color: $grey;
+    font-size: .7rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  @include element('tile') {
+    border-left: .0625rem solid $dark-grey;
+    border-left: .0625rem solid $white-02;
+    box-shadow: -.0625rem 0 0 $black-40;
+    margin-bottom: 1.2rem;
+
+    &:first-child {
+      border: 0;
+      box-shadow: none;
+    }
+
+    @include element('contact_details') {
+      color: $grey;
+      font-size: .75rem;
+      list-style: none;
+      margin: 0;
+    }
+  }
+
+  @include element('site_map') {
+    border-bottom: .0625rem solid $black;
+    border-top: .0625rem solid $white-02;
+    box-shadow: 0 .0625rem 0 $white-02;
+
+    @include element('container') {
+      border-left: .0625rem solid $dark-grey;
+      border-right: .0625rem solid $dark-grey;
+    }
+
+    @include element('navigation') {
+      margin: 0 auto;
+      padding: .7rem 1rem;
+
+      li {
+        border-left: .0625rem dotted $light-grey;
+        display: inline-block;
+        padding: .625rem;
+
+        &:first-child {
+          border: 0;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  @include element('banner') {
+    padding: 1.25rem 0;
+
+    @include element('copyright') {
+      color: $grey;
+      font-size: .7rem;
+      margin-top: .625rem;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

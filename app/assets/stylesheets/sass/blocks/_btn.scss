@@ -1,0 +1,21 @@
+// As distinct from the bootstrap .button class
+
+.btn {
+  background: $dark-grey;
+  background-image: -moz-linear-gradient(center bottom, $white-rgba 0%, $white-02 100%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $white-rgba), color-stop(1, $white-rgba));
+  margin-bottom: 0;
+
+  &:hover {
+    background-color: $medium-grey;
+  }
+
+  @include modifier('disabled') {
+    background: $grey;
+
+    &:hover {
+      background-color: $grey;
+      text-decoration: none;
+    }
+  }
+}
